@@ -30,16 +30,54 @@
 
             tex: { inlineMath: [['$', '$'], ['\\(', '\\)']] },
             svg: { fontCache: 'global' }
+            //Diferencia svg i mapa de bit
         };
     </script>
     <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script>
     <style>
         body { font-family: Arial, sans-serif; margin: 20px; line-height: 1.6; }
+        /*Diferencia entre serif, sanserif, monospace*/
+        /*Model de caixes css o box model css, en el box model tenim una capa al voltant del 
+        contingut o content que es diu padding, al voltant del padding es troba el border i a voltant del border es troba el margin.
+        Margin, border i padding són propietats css(properties) que van seguides de dos punts i un valor o value en píxels
+        Tots els css són iguals, primer es posa el nom de la etiqueta html o tag a la qual volem donar-li un o diversos estils, 
+        per exemple h2 o button o canvas... Després del tag es posa una clau de tipus "curly bracket" i a sota es posa 
+        propietat1:valor1; i en la línia següent propietat2:valor2; 
+        si la propietat és color el valor és #333. El número #333 no és un número decimal, és un número hexadecimal en base 16.
+        Vol dir que els números hexadecimals són 0 al 9, A(vol dir 10), B(vol dir 11), C(vol dir 12), D(vol dir 13), E(vol dir 14); F(vol dir 15).
+        Els codis de colors tenen tres valors hexadecimals que van del 00 fins al FF, és a dir que tinc una combinació que va des del 
+        000000 fins al FFFFFF. Els dos primers digits són el color vermell, els dos següents són el color verd, i el dos últims són blaus. 
+        Recordar rgb(red,green,blue). Quantes combinacions de colors tenim? 256 elevat a la 3=16 mlions 700 mil colors diferents.
+        El color es por expressar en hexadecimal o en rgb en decimal, per exemple #FF0000, és 255,0,0 és pot expressar d'una altre manera?
+        A vegades noms en angles com red o noms que puc trobar amb color names html en google. h2 de la línia 54 controla el h2 
+        que es troba a la línia 68 i el #333 és el color gris. LLavor que fa la línia 54 i la línia 58? Fa que el títol de la línia
+        68 sigui gris*/
         h2 { color: #333; }
         input[type="number"] { width: 70px; margin-right: 10px; }
+        /*input és una etiqueta html que permet l'entrada de dades per l'usuari i al ser de tipus number només accepta números,
+        no accepta lletres com podem veure a la línia 56 i a la línia 99,100,105,106. El input és com una caixa de text per a que 
+        escrigui l'usuari i tindra una amplada definida a la línia 56 amb css width és amplada en angles i amb 70 píxels d'amplada 
+        puc escriure més d'un número d'ample,  i perquè deixo marge a la dreta de 10 píxels? Per tenir espai i no s'uneixi l'entrada
+        d'informació amb l'entrada de l'usuari, sería un marge dintre de la caixa*/
+        
         button { padding: 8px 16px; margin-top: 10px; cursor: pointer; }
+        /*A la 63 tinc la configuració del botó o de tots els botons que està a la 114 i que ens permet
+        calcular quan clico. Aquest botó tè padding o marge interior, quan hi ha dos números, 8 píxels i 16 píxels, 
+        si hi ha un número significa que els marges estan pels 4 costats i són iguals a aquests números,
+        si hi ha dos números el primer número es el mateix marge adalt i abaix, i el segon número és a la dreta i a la esquerra,
+        en aquest cas 8 píxels adalt i abaix i 16 píxels a dreta i esquerra. Si hi hagues tres números el primer és adalt, 
+        el segon dreta i esquerra i el tercer número és a baix, margin top és un altre forma de regular el marge superior, 
+        també existeix margin-bottom, margin-right i margin-left. Cursor pointer és que es vegui el cursor dins 
+        del text box o caixa de text.*/
         .result { margin-top: 20px; background-color: #f0f0f0; padding: 10px; border-radius: 5px; }
+        /*Result té un punt davant que significa classe que és un objecte del que podem tenir diverses instancies o objectes
+        de la mateixa classe, vol dir que puc afectar a diferents zones que es diguin results, és a dir, class="result" 
+        que es troba a la línia 126 i que contindra diferent resultats, la línia 72 dona estil a la líi 126 i
+        fa que els resultats tinguin un marge superior de 20 píxels un color de fons gris, un marge intern de 10 píxels
+        i un radi de la zona grisa de resultats de les cantonades de 5 píxels */
         canvas { border: 1px solid #ccc; margin-top: 20px; background-color: #f9f9f9; }
+        /*Canvas és l'area de dibuix on surten els vectors i té una cantonada de 1 píxel de gruix sòlid 
+        de color gris i un marge superior de 20 píxels i un fons grisos i es refereix al canvas que estroba a la línia 131*/
         .teoria { background: #eef; padding: 10px; border-radius: 5px; margin-bottom: 20px; }
     </style>
 </head>
