@@ -37,13 +37,23 @@ Charset vol dir character set, és el "set" que vol dir conjunt de "characters" 
     body {
 
       font-family: Arial, sans-serif;
+      /*La línia anterior busca lletra arial per tot el que surti dins del body(línia76) i si no la troba utlilitza una lletra sense serif*/
 
       margin: 20px;
-
+      /*Margin és el marge exterior. CSS té un model de caixa o box model en el que el contingut o content està envoltat pel pdding i 
+      aquest està envoltat pel border i el border està envoltat pel margin. Margin, padding i border són propietats CSS que puc aplicar a diferents
+      etiquetes o tags html. Despreés de la propietat hi ha un valor en píxels, a vegades hi ha dos valors en píxels i a vegades tres valors.
+      Si hi ha un valor s'aplica en totes direccions si hi ha dos valors s'apliquen el primer a dalt i a baix i el segon valor a la dreta i a la esquerra.
+      Si ha tres valors, s'apñica el primer valor adalt, el segon valor a la dreta i a la esquerra. Si hi ha dos valors s'aplica el primer adalt i abaix i el segon
+      a la dreta i a la esquerra. Si hi ha tres valors s'aplica: el primer valor s'aplica adalt, el segon a la dreta i a l'esquerra
+      i el tercer abaix.Si hi ha quatre números, el primer número és el marge superior, el segon és la dreta, el tercer abaix, i el
+      quart l'esquerra. Tot el body amb tot el cintingut html visible per l'usuari amb paràgrafs, dibuixos(canvas), tindrà un marge de 20px
+      per tots els cotats i no queden les lletres o els dibuixos enganxats als extrems de l'ordinador o del mobil.*/
     }
 
 
     .equation {
+      /*El punt que hi ha davant de equation és molt imporatnt perquè indica que es tracta calse class="equation"*/
 
       margin: 20px 0;
 
