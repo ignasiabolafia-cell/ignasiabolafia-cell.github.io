@@ -125,13 +125,17 @@ Charset vol dir character set, és el "set" que vol dir conjunt de "characters" 
     <button onclick="calculatePosition()">Calcula la posició</button>
     /*La línia 125 relaciona el codi html amb el codi javascript perquè la
     etiqueta "button" de html té una propietat anomenada "oncklick" que
-    executa una funció javascript*/
+    executa una funció javascript anomenada "calculatePosition()", trobada a la línia 113
+    que farà els càlculs matemàtics.*/
 
   </div>
 
   <div id="output"></div>
 
   <canvas id="robotCanvas" width="400" height="400"></canvas>
+  /*la línia 133 i 135 són espais buits, fets per divisors (trossos de codi).
+  a la 133 li hem dit "output", que són les fórmles que apareixeran
+  "robotCanvas" és un altre divisor on apareixeran els dibuixos dels vectors*/
 
 
 <script>
@@ -141,6 +145,8 @@ function calculatePosition() {
   // Agafar les dades introduïdes per l'usuari
 
   let a1 = parseFloat(document.getElementById('a1').value);
+  /*let a1 crea un espai a la memòria per emmagatzemar el valor introduit per l'usuari (getElementById('a1') agafa el valor de a1.
+  parseFloat converteix el número en un floating point number (número decimal). Queda emmagatzemat el que introdueix l'usuari a a1.*/
 
   let a2 = parseFloat(document.getElementById('a2').value);
 
