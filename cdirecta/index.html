@@ -96,8 +96,15 @@ Charset vol dir character set, és el "set" que vol dir conjunt de "characters" 
   <div>
 
     <label for="a1">Longitud del primer braç (a₁):</label>
+    /*label es tradueix com "etiqueta". És un espai que seveix coma a indicador del que s'ha de posar a l'input.*/
 
     <input type="number" id="a1" value="1" step="0.1"><br><br>
+    /*Input significa una entrada de informació per part de l'usuari.
+    Apareix una caixa de text per esciure que només accepta números, perquè type="number"
+    id significa identificador únic, és com un DNI. 
+    Value és el valor per defecte, si no hi ha cap valor per defecte especificat, surt aquest a la caixa de text.
+    step significa la variació que es pot produir.
+    br és una línia en blanc, un espai.*/
 
 
     <label for="a2">Longitud del segon braç (a₂):</label>
@@ -116,6 +123,9 @@ Charset vol dir character set, és el "set" que vol dir conjunt de "characters" 
 
 
     <button onclick="calculatePosition()">Calcula la posició</button>
+    /*La línia 125 relaciona el codi html amb el codi javascript perquè la
+    etiqueta "button" de html té una propietat anomenada "oncklick" que
+    executa una funció javascript*/
 
   </div>
 
