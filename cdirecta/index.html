@@ -96,15 +96,15 @@ Charset vol dir character set, és el "set" que vol dir conjunt de "characters" 
   <div>
 
     <label for="a1">Longitud del primer braç (a₁):</label>
-    /*label es tradueix com "etiqueta". És un espai que seveix coma a indicador del que s'ha de posar a l'input.*/
+    <!--label es tradueix com "etiqueta". És un espai que seveix coma a indicador del que s'ha de posar a l'input.-->
 
     <input type="number" id="a1" value="1" step="0.1"><br><br>
-    /*Input significa una entrada de informació per part de l'usuari.
+    <!--Input significa una entrada de informació per part de l'usuari.
     Apareix una caixa de text per esciure que només accepta números, perquè type="number"
     id significa identificador únic, és com un DNI. 
     Value és el valor per defecte, si no hi ha cap valor per defecte especificat, surt aquest a la caixa de text.
     step significa la variació que es pot produir.
-    br és una línia en blanc, un espai.*/
+    br és una línia en blanc, un espai.-->
 
 
     <label for="a2">Longitud del segon braç (a₂):</label>
@@ -123,19 +123,19 @@ Charset vol dir character set, és el "set" que vol dir conjunt de "characters" 
 
 
     <button onclick="calculatePosition()">Calcula la posició</button>
-    /*La línia 125 relaciona el codi html amb el codi javascript perquè la
+    <!--La línia 125 relaciona el codi html amb el codi javascript perquè la
     etiqueta "button" de html té una propietat anomenada "oncklick" que
     executa una funció javascript anomenada "calculatePosition()", trobada a la línia 113
-    que farà els càlculs matemàtics.*/
+    que farà els càlculs matemàtics.-->
 
   </div>
 
   <div id="output"></div>
 
   <canvas id="robotCanvas" width="400" height="400"></canvas>
-  /*la línia 133 i 135 són espais buits, fets per divisors (trossos de codi).
+  <!--la línia 133 i 135 són espais buits, fets per divisors (trossos de codi).
   a la 133 li hem dit "output", que són les fórmles que apareixeran
-  "robotCanvas" és un altre divisor on apareixeran els dibuixos dels vectors*/
+  "robotCanvas" és un altre divisor on apareixeran els dibuixos dels vectors-->
 
 
 <script>
@@ -145,8 +145,8 @@ function calculatePosition() {
   // Agafar les dades introduïdes per l'usuari
 
   let a1 = parseFloat(document.getElementById('a1').value);
-  /*let a1 crea un espai a la memòria per emmagatzemar el valor introduit per l'usuari (getElementById('a1') agafa el valor de a1.
-  parseFloat converteix el número en un floating point number (número decimal). Queda emmagatzemat el que introdueix l'usuari a a1.*/
+  //let a1 crea un espai a la memòria per emmagatzemar el valor introduit per l'usuari (getElementById('a1') agafa el valor de a1.
+ // ParseFloat converteix el número en un floating point number (número decimal). Queda emmagatzemat el que introdueix l'usuari a a1.
 
   let a2 = parseFloat(document.getElementById('a2').value);
 
