@@ -1,4 +1,3 @@
-
 <!doctype html>
 <html lang="ca">
 <head>
@@ -15,27 +14,28 @@ window.MathJax = {
 <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script>
 
 <style>
-   /*La línia 24 diu que tot el text del html que està en el body, agafi el tipus de lletera arial, si no troba arial,
-  agafa lletra el Helvetica i si no el troba agafa quealsevol lletra de tiups sans-seri, sense serifa o sense adornaments
-  Margin 20 px al voltant de tot el contingut per assegurarnos de deixar separats els continguts del cuatre costats,
-  Line-height és el espai vertical entre línies de text, que per defecte depèn del tipus de lletra i acostuma a ser 1,2 o 1,4,
-  significa que entre una línia i al següent hi ha una separació del 120% o 140%. Nosaltres hem triat línies més separades un
-  170%. El color #123 é su  color hexadecimal i sempre té 6 digits rrggbb, sent cada lletra un númerro entre el 0 al 9 o/i A(10)B(11)C(12)D(13)E(14)F(15)
-  Quan veiem 3 números estem veient un hexadecimal abreujat i el número real es #112233 i aquest correspon al rgb17,34,51 en decimal que és un blau fosc*/
+  /*La línia 25 diu que tot el text del html que està en el body, agafi el tipus de lletra arial, si no troba arial,
+  agafa lletra el Helvetica i si no el troba agafa qualsevol lletra de tipus sans-serif, sense serifa o sense adornaments.
+  Margin de 20 pixels al voltant de tot el contingut per assegurarnos de deixar separats els continguts dels cuatre costats.
+  Line-height és el espai vertical entre línies de text, que per defecte depèn del tipus de lletra i acostuma a ser 1,2 1,4,
+  significa que entre una línia i la següent hi ha una separació del 120% o 140%. Nosaltres hem triat liníes més separades un
+  170%. El color #123 és un color hexadecimal i sempre té 6 digits #rrggbb,sent cada lletra un número entre el 0 i el 9 o  A(10)
+  B(11)C(12)D(13)E(14)F(15).Quan veiem 3 números estem veiem un hexadecimal abreujat i realment és el #112233 i aquest correspon
+  al rgb17,34,51 en decimal que és un blau fosc.*/
 body{font-family:Arial,Helvetica,sans-serif;margin:20px;line-height:1.7;color:#123}
-  /*La línia 27 canvia els titols grans (h1), títols mitjans(h2, titols petits(h3 aun color blau fosc*/
+  /*La línia 27 canvia els titols grans (h1), titols mitjans (h2), titols petits (h3) a un color blau fosc*/
 h1,h2,h3{color:#0b3d91}
-  /*La línia 29 és una classe que afecta a la línia 120 on s'escriu les formules tinguin un 
-  color gris clar de fons (background), un espai intern dintre de la caixa de la formula perquè no tooqui els costats de 12px(padding),
-  unes cantonades arrodonides(borer-radius), un espai vertical abans i deprés de la caixa (margin) i que el
-  text de la formula estigui dins de la caixa*/
+  /* La línia 32 és una classe que afecta a la línia 120 on s'escriu les formules matemàtiques i fa que les formules tinguin un
+  color gris clar de fons (background), un espais intern dintre de la caixa de la formula perquè no toqui els costats de 12
+  pixels(padding), unes cantonades arrodonides(border-radius),un espai vertical abans i desprès de la caixa (margin) i que
+  el text de la formula estigui dins de la caixa*/
 .formula{background:#f7f7f9;padding:12px;border-radius:6px;margin:10px 0;text-align:center}
-  /*A la línia 34 tenim els estils de la taula generals, que es troba a la línia 52, el Collapse fa que les línes de les
-  taules siguin senzilles i no línies dobles(surten per defecte sempre dobles), El marge don un espai abans de la taula i 
-  deprès de la taula.*/
+     /* A la línia 36 tenim els estils de la taula generals, que es troba a la línia 54, el Collapse fa que les línies de les
+  taules siguin senzilles i no línies dobles ( surten per defecte sempre dobles). El marge dona un espai abans de la taula i
+  desprès de la taula. */    
 table{border-collapse:collapse;margin:10px 0}
-  /*td és una cel·l i significa table date o dada de una taula o cel·la th és table heading que és la primera filera de una
-  taula.Tant les cel·les de la primera filera com les taules tenen un espai*/
+  /*td és una cel·la i significa table data o dada de una taula o cel·la i th és table heading que és la primera filera de una
+  taula. Tant les cel·les normals com les cel·les de les primeres fileres, tenen un espai de 6 pixels.*/
 td,th{padding:6px;border:1px solid #ccc}
 .step{margin:10px 0;padding-left:15px;border-left:3px solid #0b3d91}
 .note{margin:8px 0;padding:8px;background:#fff8dc;border-left:4px solid #ffcc00}
@@ -94,7 +94,11 @@ img {
 <p>Per veure-ho de manera geomètrica simple:</p>
 <div class="step">Component Nord-Sud: $$NS = |\Delta Lat| \times 60 = 0.1242 \times 60 = 7.45 \text{ NM}$$</div>
 
-<p class="note">Un grau de latitud és constant a tota la Terra i representa aproximadament 60 milles nàutiques (111 km) entre paral·lels...</p>
+<p class="note">Un grau de latitud és constant a tota la Terra i representa aproximadament 60 milles nàutiques (111 km) entre paral·lels... Si
+estic al equador un segon és una milla,perquè cos de 0 és 1 i dona una  milla. A Barcelona estic a 42 graus de latitud i per tant un segon de
+longitud seria cos de 42 milles=0,74 milles. Si vaig més cap al Nord a Islàndia, la latitud de 60 graus i el cos de la latitud és 0,5 i vol dir
+que un segon de longitud serà mitja milla. En el pol nord o pol sud,l'angle de latitud és 90 graus i el cos de 90 és 0, per tant tenim 0 milles
+de distància. </p>
 
 <div class="step">Longitud a lat mitjana: $$1^\circ lon = 60 \cos(35.95^\circ) \approx 49.2 \text{ NM}$$</div>
 <div class="step">Component Est-Oest: $$EW = \Delta Lon \times 49.2 = 0.2900 \times 49.2 \approx 14.27 \text{ NM}$$</div>
@@ -140,4 +144,3 @@ img {
 <div class="step">Component Est (u):<br>$$u_{res} = u_{nau} + u_{corrent} + u_{vent} = 5.31 + 1.30 + 6.00 \approx 12.61$$</div>
 </body>
 </html>
-
