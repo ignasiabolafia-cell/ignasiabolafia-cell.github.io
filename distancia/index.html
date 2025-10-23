@@ -89,13 +89,41 @@ img {
 
 <div class="step">Per convertir a decimal: $$Lat = 36 + \frac{0}{60} + \frac{45}{3600} = 36.0125^\circ$$</div>
 <div class="step">I la longitud: $$Lon = (-5 + \frac{36}{60} + \frac{20.16}{3600}) = -5.6056^\circ$$</div>
+  /*Un divisor(div) com el de la línia 90 o 91 es un troç de codi que te un sistema de identificació que pot ser un id, 
+  en comptes de class= posariem id= i en aquest segon cas només podria haver una sola vegada, per exemple id="step1" i no
+  por haver repetit "step1" en un altre divisor perquè és uns id, en canvi step por anar repetit ja que no és una id, sinó
+  una clsse. Recorda que en el codi #css tenim un .step a la línia 44,si tinguessim "step1" comm a identificador hauríem
+  de posar a la línia 44 #step1.
+  Quina és la funció de la class i del identidicador? La class el podem posar més d'un cop i és més general, i el id és un
+  element únic.*/
 
 <h3>Ceuta</h3>
 <table>
 <tr><th>Latitud (DMS)</th><td>35º 53' 17.88" N</td></tr>
 <tr><th>Longitud (DMS)</th><td>5º 18' 56.16" W</td></tr>
 </table>
-
+<!--A continuació veiem diferents codis amb JavaScript emprant la bibloteca MathJax, el doble $$ serveix per avisar al navegador de que a 
+  continuació el codi es MathJax i l'ha de renderitzar o visualitzar segons el LaTex que és el llenguarge matemàtic.
+  Anem a explicar eld diferents símbols:
+  \frac{A}{B} significa que dividim A entre B(A/B).
+  35.8883^\circ significa el ^(sombreret) elevat a i la barra inclinada circ (\circ) significa º el símbol del grau.
+  Si poso \Delta és una delta majuscula que te forma de triangle
+  \lambda és aquests símbol λ, que és una lletra grega que s'utilitza a matemàtique per expressar la longitud.
+  \varphi es la lletra grega φ, phi i es pronuncia fi i correspon a la latitud.
+  \times aquest és el símbol de multiplicar, x una mica més gran sense arribar a ser una X majúscula.
+  \pi és el símbol π
+  \varphi_{rad}, si posem una barra baixa vol dir subíndex i el posem entre claus el que volem que apareixi en subíndex,
+  apareixera la lletra φ amb un subíndex amb la paraula rad perquè volem expressar la latitud no en graus º sino en radiants
+  que es la unitat del sistema internacional(SI)
+  Si poso Lat_{(Tarifa)}, Tarifa serà un subíndex sota la paraula Lat.
+  \text{ rad} permet escriure el text normal rad dintre de una MathJax.
+  $$a = \sin^2\left(\frac{\Delta \varphi}{2}\right) + \cos(Lat_{Tarifa} \frac{\pi}{180}) \cos(Lat_{Ceuta} \frac{\pi}{180}) \sin^2\left(\frac{\Delta \lambda}{2}\right)$$
+  sin^2 el sombreret és elevat a la 2, \left és per obrir el parentesis esquerra i \right és per tancar el parentesi.
+  \approx és el símbol de doble titlla ≈ que significa aproximadament.
+  \arctan2(y,x) és un tipus especial de arctangent anomenta arctangent 2 i en comptes d'anar de 0 a 360º, es a dir de 0
+  a 2 pi radiants que es com funciona la tan i la arctan normal. Com el robot no pot donar la volta completa i va entre pi i -pi
+  es a dir apliquem la funció arctang 2 que funciona a la meitat del cercle 
+  -->
 <div class="step">Latitud en decimal: $$Lat = 35 + \frac{53}{60} + \frac{17.88}{3600} = 35.8883^\circ$$</div>
 <div class="step">Longitud en decimal: $$Lon = (-5 + \frac{18}{60} + \frac{56.16}{3600}) = -5.3156^\circ$$</div>
 
