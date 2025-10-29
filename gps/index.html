@@ -17,7 +17,17 @@
 <h2>Mesurador de Latitud i Longitud</h2>
 
 <button onclick="mesura()">Mesura</button>
+  <!--Aquest botó html executa una funció JavaScript al clicar-se que es troba a la línia  36 que ens permet
+  trobar la nostre latitud i longitud. onclick és un atribut del html button que permet unir el 
+  botó javascript en la functio mesura quen fem clickal botó.-->
 <table id="mesuresTable">
+  <!--La línia 23 és linici d'una taula, perquè li hem posat una id, perquè? Podria ser per molts motius, primer, 
+  amb un #mesuresTable{propietat1:valor1} podría modificar per exemple els marges de la taula.
+  Primerr hauríem d'agafar la id amb un #mesuresTable{color:blue;margin-left:20px}. A més a més de poder canviar
+  l'estil de la taula amb un id únic, podem veure que a la línia 63, gràcies a getElementById,
+  agafo l'dentificador(mesuresTable) abans que no feia res, i el transformo en una variable de tiupus
+  javascript constant perquè així aconseguim poder modificar-la i afegir una altra variable diferent(row).
+  -->
   <tr>
     <th>#</th>
     <th>Latitud</th>
@@ -28,11 +38,31 @@
 
 <h3>Distàncies pas a pas</h3>
 <div id="distancies"></div>
+  <!--A la línia 40, tinc un divisor que és una àrea identificada amb una id però no visible per defecte
+  per l'usuari, la puc fer visible amb codi javascript o css o una combinació que canvi la propietat
+  visible a hidden o a la inversa-->
 
 <script>
 let mesures = [];
-
+/*La línia 46 és una array. Els [] sempre indiquen arrays o conjunts de dades. Ara l'array és buit
+  però és important definir-ho buit per a que es reservi un espai a la memoria del ordinador per emmagatzemar
+  diverses dades*/
 function mesura() {
+  /*La funció mesura el primer que fa és una estructura condicional amb un if que té un signe
+  de admiració !(significa negació). 
+  if (!navigator.geolocation). El primer if és el condicional que coprova que l'objecte navigator
+  de la classe navigator que té un métode anomenat geolocalització està disponible en aquell navegador o no
+  El punt que hi ha entre navigator i geolocation és molt important perquè és la síntaxi del punt,
+  o dot syntax, és a drir, el punt separa l'objecte del métode que volem aplicar en aquest.
+  El punt aplica l'acció. Si el navegador no por executar geolocation haurà de sortir un 
+  misatge de alerta.
+  El return el que fa és mostrar el missatge en pantalla.
+  Alert és una funció de javascript que mostra una finestra emergentt amb un missatge per l'usuari
+  i és una funcio molt senzilla perquè només té un argument.Els argument és el que tenim
+  a dins dels paréntesi, si no tenim el paréntesis buits. L'únic argument és el text que volem
+  mostrar l'usuari. La finestra emergent obliga a l'usuari a tancar-la. S'utilitza per a missatges
+  simples com avisos,errors,confirmacions. Hi ha altres tipus de finestres emergent més moderns
+  i potents que s'anoenen modals o finestres emergents modals*/
   if (!navigator.geolocation) {
     alert("La geolocalització no és compatible amb aquest navegador.");
     return;
