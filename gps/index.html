@@ -62,7 +62,17 @@ function mesura() {
   a dins dels paréntesi, si no tenim el paréntesis buits. L'únic argument és el text que volem
   mostrar l'usuari. La finestra emergent obliga a l'usuari a tancar-la. S'utilitza per a missatges
   simples com avisos,errors,confirmacions. Hi ha altres tipus de finestres emergent més moderns
-  i potents que s'anoenen modals o finestres emergents modals*/
+  i potents que s'anoenen modals o finestres emergents modals. Si hi ha geolocalització no surt
+  la finestra i s'executa la línia 73 i seguents.
+  Navegation.geolocation és una API, que significa interface de programació d'aplicacions que 
+  ens dona la posició la latitud i longitud de l'usuari. Aquesta aplicació té una funció principal
+  que és getCurrentPosition. Té 3 argumetns encara que veiem només 1. El primer argument, es diu
+  success/éxit, el segon és error, el tercer és options. Llavors la funció és
+  getCurrentPosition(success,error,posotion)El primer argument success és una
+  callback, és un sistema que es crida i que permet obtenir laposició, i ho fem amb
+  la funció feltcha que és una forma molt ràpida d'escriure una funció sense escriure la paraula funcrion. Les funcions => tenen una sintàxi simplificada i 
+  no utilitza la paraula this per referir-se a elles mateixes i ocupen menys espai.
+  */
   if (!navigator.geolocation) {
     alert("La geolocalització no és compatible amb aquest navegador.");
     return;
