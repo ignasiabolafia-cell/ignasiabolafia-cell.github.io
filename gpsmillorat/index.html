@@ -21,11 +21,11 @@
 <h2>Mesurador de Latitud i Longitud Avançat</h2>
 
 <label><b>Indica el lloc:</b></label>
-  /*Es unna etiqueta per escriure que acompña normalment a un textbox o caixa de text o definida per un input.
+  <!--Es unna etiqueta per escriure que acompña normalment a un textbox o caixa de text o definida per un input.
   L'input de més abaix no accepta numbers, accepta text, i té un text per defecte definit per la propietat placholder.
-  */
+  -->
 <input id="ubicacioInput" type="text" placeholder="Ex: Punt A">
-  /*A continuació tenim tres botons que quan els cliquem s'executan les funcions de la línia function mesura(){instruccions...}
+  <!--A continuació tenim tres botons que quan els cliquem s'executan les funcions de la línia function mesura(){instruccions...}
   i el altre dos botons cridaran les funcions de javascript gràcies a lla propietat o atribut onclick.
   CSV és significa comma separated values o valors separats per coma, i és la forma més fàcil de guardar dades, per exemple,
   latitud, longitud.
@@ -37,7 +37,8 @@
   XML és molt potent ja que és extensible a quealsevol etiquta que m'invento per exemple<brand>Seat</brandcar>
     El gpx té unes etiquetes propies, la pimera etiqueta és <TRK> que és genera dintre de la function exportGPX () 
       TRK significa tracks o trjectes que són registres de camins o rutes seguits per una serie de punts(latitud,longitud ordenats cronològicament))
-      Dintre del TRK*/
+      Dintre del TRK hi ha una etiqueta <name> que hi ha el nom de la ruta, i a continuació hi ha una etiqueta trkpt
+  abans hi ha un trkseg que es una secuencia de trkpt o track points que a vegades s'anomena waypoints o punts de referencia-->
 <button onclick="mesura()">Mesura</button>
 <button onclick="exportCSV()">Exporta CSV</button>
 <button onclick="exportGPX()">Exporta GPX</button>
