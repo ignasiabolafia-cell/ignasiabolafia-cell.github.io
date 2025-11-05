@@ -39,6 +39,9 @@
       TRK significa tracks o trjectes que són registres de camins o rutes seguits per una serie de punts(latitud,longitud ordenats cronològicament))
       Dintre del TRK hi ha una etiqueta <name> que hi ha el nom de la ruta, i a continuació hi ha una etiqueta trkpt
   abans hi ha un trkseg que es una secuencia de trkpt o track points que a vegades s'anomena waypoints o punts de referencia-->
+  <!--Podem afegir més etiquetes comm per exemple <ele> que significa elevació que és l'alçada en metres del punt
+  GPX esun format obert, es a dir, que no hi ha cap empresa propietaria i es un format molt utilitzat per dipositius gps,
+  per programes que utilitzen mapes digitals o per apps que utilitzen rutes. Es compatible amb GIS que son sistemes d'informació geogràfica-->
 <button onclick="mesura()">Mesura</button>
 <button onclick="exportCSV()">Exporta CSV</button>
 <button onclick="exportGPX()">Exporta GPX</button>
@@ -59,10 +62,25 @@
 <div id="map"></div>
 
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <!--La línia 64 carrega leaflet.js i fa possible que funcionin els mapes.
+  Leaflet es un bibloteca de javascript el codi obert. Codi obert vol dir que tothom té accés i pot veure internament el codi
+  Per exemppple google maps no es de codi obert, sino que és de codi tancat o codi propietari, no només no puc veure 
+  tot sino que tampoc el pu modificar (similar a libreofice(es gratis i de codi obert i inclou editoor de text i editor de la positives, en canvi Microsoft ofice
+  concretament word, excel o powr point, son de codi tancat i de pagament) i Microsoft Office)-->
 <script>
 let mesures = [];
+  /*Let mesures sifnifica crear una variable global perquè afecta a tot l'escrit que comença a la línia 70 i el iniciem o la inicialitzem
+  amb un conjunt de valors [] que es coneeix com array buit amb la intenció d'emmagatzemar lectures gps de latitud i longitud
+  let map cre una instancia de mapa tipus leaflet i l'assigna a un element, al que tingui una id anomenada map en aquest cas és 
+  un divisor o àrea buida de la pàgina que està a la línia 62 i que es el lloc on apareixerà el mapa. Si no hi hagués escrit la líni 62, 
+  la 77 generaria un error, perquè no trobaria un lloc on posar el mapa.
+  El setView dona una visita inicial del mapa i les coordenades inicials son 0,0 que està en el Golf de guinea
+  i 2 es el zoom i el zoom 2 es molt allunyat, vista global(zoom 8,veuriem catalunya, zoom 13 veuriem Martorell, zoom 0 veuriem tot el món
+  i zoom 18 l'institut)*/
 let map = L.map('map').setView([0,0], 2);
 L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+  /*L.tileLayer, tile significa mosaic per tant es una capa de mosaic de openstreetmap, openstreetmap es la versió de codi obert i lliure del
+  codi tancat de google maps*/
   attribution: '© OpenStreetMap contributors'
 }).addTo(map);
 let polyline = L.polyline([], {color:'red'}).addTo(map);
