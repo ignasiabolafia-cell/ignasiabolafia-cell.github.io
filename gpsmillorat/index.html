@@ -93,7 +93,8 @@ function mesura() {
     alert("La geolocalització no és compatible amb aquest navegador.");
     return;
   }
-
+/*CurrentPosition és una part de l'API de Geolocation, pot funcionar amb un únic argument (posició) però pot contenir fins a 3.
+El primer argument*/
   navigator.geolocation.getCurrentPosition(
     (pos) => {
       const lat = pos.coords.latitude;
