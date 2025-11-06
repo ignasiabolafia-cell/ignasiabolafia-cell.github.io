@@ -81,15 +81,25 @@
             background: linear-gradient(135deg,#f5f7fa 0%, #d8e1ef 100%);
             /* linear-gradient fa una transició de color de fons, aquesta és un degradat suau ja que hi ha poca diferencia entre les lletres en l'abecedari.*/
             color:#222;
+            /*Color és el color del text*/
         }
 
         .app {
+            /*Quan hi ha un punt abans de app significa que és un identificador o ID.A les línies 305 hi ha un contenidor o divisor que
+            tindrà una amplada màxima i uns marges on estarà els resultats.*/
             max-width: 1100px;
             margin: 28px auto;
             padding: 20px;
         }
 
         header {
+            /*A una pàgina web pot haber una capçelera o  header i a la part inferior en peu de pàgina o footer.
+            Quan el gradient lineal és de 90 graus perquè posa 90deg vol dir 90 deegrees vol dir que la pantalla
+            90 graus vol dir que en quin sentit va el degradat de colors, en aquest cas gira a la dreta. Si és 180 graus
+            significa que el degradat va cap abaix. I si es 270deg cap a l'esquerra el degradat de colors. I si
+            són 0deg.
+            Linear gradient te tres argumetns que són el angle, el color iniciali el final.
+            */
             background: linear-gradient(90deg,var(--primary),#24414a);
             color: #fff;
             padding: 22px;
