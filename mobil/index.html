@@ -15,3 +15,76 @@
 
 </body>
 </html>
+
+<html>
+<head>
+  <title> DETECTOR MÒBIL</title>  <script>
+        window.MathJax = {
+            tex: {
+                inlineMath: [['$', '$'], ['\\(', '\\)']],
+                displayMath: [['$$', '$$'], ['\\[', '\\]']],
+                processEscapes: true
+            },
+            svg: { fontCache: 'global' },
+            startup: {
+                pageReady: function () {
+                    return MathJax.startup.defaultPageReady().then(function () {
+                        // Quan MathJax estigui llest, fem un primer càlcul
+                        // (es pot ometre aquí perquè hi ha un load event més endavant)
+                        // calculateAll();
+                    });
+                }
+            }
+        };
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script>
+$$f=\frac{v}{\lambda}$$
+\\
+$$f=\text{freqüència (cicles/s)}$$
+\\
+$$v=\text{velocitat de la ona (m/s)}$$
+\\
+$$\lambda=\text{longitud d'ona(m)}$$
+\\
+$$\text{ La fórmula anterior s'aplica a qualsevol ona. Per exemple, el so, les ones del mar, i les ones electromagnètiques. si són ones elecromagnètiques la velocitat és c, que és la velocitat de la llum.}$$
+<p>La longitud d'una ona és el periode, llavors si la multipliquem pel numero d'ones obtindrem la distància, i si tenim la distància i el temps podem trobar la velocitat
+Si tenim ones electromagnetiques la velocitat és c=3·10^8 m/s. Així podem trobar el diàmetre de l'Anell d'Hertz. La deducció que la velocitat és va fer Maxwell a les seves equacions de forma teorica als anys 1860's i al 1887 Hertz
+va fer experiments per demostrar les equacions teoriques de Maxwell existien a la realitat. </p>
+\\
+$$\text{Si volem detectar un mòbil que emeti a 1800 MHz, quin diàmnetre és necessari per construir un anell de Hertz. Serà la meitat de la longitud d'ona. Sustituïm valors per tal de calcular el diametre aïllant la longitud d'ona.}$$
+
+$$D=2\lambda$$
+\\
+$$D=\text{diàmetre de l'anell de hertz}$$
+\\
+$$\lambda=longitud d'ona$$
+
+$$\lambda=\frac{c}{f}=\frac{3·10^{8}\text{m/s}}{1800·10^{6}\text{cicles/s}}=0,16667 \text{m}=16,6667\text{cm}$$
+
+$$f=\frac{1}{2\pi\sqrt{L·C}}$$
+  <p>La fórmula anterior es coneix com a fórmula de freqüència de resonància i és important perquè ens diu la relació
+  que hi ha entre la freqúència que volem detectar què és la del mòbil com per expemple 1800MHz amb dos paràmetres d'elemnts 
+  electrònics del circuit.</p>
+<h1> Com construim l'Anell de Hertz?</h1>
+<p> Agafem un cable d'electrònica rígid  (AWG 22 (el més comú): Té un diàmetre de 0,64 mm) i el pelem i un cop pelat el deixem en un espai de 5 mm obert. Es coporta com un condensador i una bobina perquè pot circular una corrent elèctrica molt dèbil que provè del camp magnètic del mòbil que genera un camp elèctric. És a dir, el mòbil genera un camp magn`tic que indueix el corrent que fa moure electrons en el coure que composa l'Aro de Hertz.
+
+</head>
+
+    <body>
+    <h1>Elements electrònics per detectar un mòbil</h1>
+    <ol>
+      <li>MICROCONTROLADOR(CERVELL):Necessitem un component que processi i decideixi que fer: encendre el LED, +
+        mesurar la intensitat d'un LED proporcional a la distància del mòbil encès. També es pot fer un brunzidor, pantalles 
+        OLED o pantalles LCD en una caixa impresa en 3D.
+        </li>
+     <li>ANTENA DE CABLE O ANELL DE HERTZ:Al 1886 Hertz va utilitzar una ampolla de Leiden per generar un camp magnètic,
+     en el nostre cas l'ampolla serà el mòbil que té un camp magnètic molt més petit. El diàmetre de l'anell de Hertz depèn de 
+     la freqüència que volem detectar.(Buscar fòrmula que relaciona el diàmetre de l'anell de Hertz amb 1800 MHz que emet el telèfon mòbil).</li>
+      <img src="ARO DE HERTZ.jpg">
+  <li>COMPONENTS AMPLIFICADORS: Pot ser amplificador operacional o diodes amplificadors    </li> 
+  <img src="AMPLIFICADOR OPERACIONAL.jpg
+  
+    </ol>
+      
+    </body>
+</html>
