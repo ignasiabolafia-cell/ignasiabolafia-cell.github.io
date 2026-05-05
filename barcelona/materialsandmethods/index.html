@@ -1,50 +1,3 @@
-<div style="max-width:1400px;margin:auto;font-family:Georgia,'Times New Roman',serif;line-height:1.7">
-
-<h1 style="text-align:center;"> USING R STUDIO AND ITS COMMANDS </h1>
-
-<p>
-In this project we used <u>R Studio</u>, an integrated development environment designed for the 
-<u>R programming language</u>. It is commonly used for statistics and data analysis because it 
-allows users to write code, test commands and visualize results in the same workspace. 
-In our research, RStudio helped us process and analyse <u>air quality data</u> in order to 
-generate different graphics that show how pollution changes over time.
-</p>
-
-<p>
-Before starting the analysis, we prepared the working environment by installing several 
-libraries with the command <b>install.packages()</b>. The most important ones were 
-<b>tidyverse</b>, which helps organise and transform data, <b>dplyr</b> for manipulating 
-data tables, <b>lares</b> for cleaning and replacing text values, and <b>openair</b>, 
-a package designed for the <u>analysis of atmospheric pollution and wind data</u>. 
-These libraries were loaded using the <b>library()</b> command so their functions could 
-be used later in the code.
-</p>
-
-<p>
-After preparing the environment, we imported the dataset using <b>read.csv()</b>. 
-The original data was stored in a <u>wide format</u>, where each hour of the day appeared 
-in a different column. To make the data easier to analyse, we converted it into a 
-<u>long format</u> using the command <b>pivot_longer()</b>. We also removed unnecessary 
-columns so the dataset became simpler and easier to work with.
-</p>
-
-<p>
-Another important step was formatting the <u>date and time information</u>. The date and 
-hour columns were combined using <b>mutate()</b> and <b>paste0()</b>. Then the time format 
-was cleaned using <b>replaceall()</b>. After this, the column was converted into a proper 
-date-time format using <b>as.POSIXct()</b>. Finally, the pollutant variable was converted 
-into a <u>factor</u> with <b>as.factor()</b> so that pollutants could be grouped in graphs.
-</p>
-
-<p>
-Once the data was prepared, we created visualizations using the <u>openair</u> package. 
-The function <b>timeVariation()</b> shows how pollution changes depending on the hour, 
-day or month. Another function, <b>trendLevel()</b>, was used to analyse the evolution of 
-a specific pollutant such as H2S. These graphics helped us understand pollution patterns 
-and present the results of our research more clearly.
-</p>
-
-</div>
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" rel="stylesheet">
   <style>
@@ -189,3 +142,50 @@ and present the results of our research more clearly.
       </div>
     </div>
   </nav>
+<div style="max-width:1400px;margin:auto;font-family:Georgia,'Times New Roman',serif;line-height:1.7">
+
+<h1 style="text-align:center;"> USING R STUDIO AND ITS COMMANDS </h1>
+
+<p>
+In this project we used <u>R Studio</u>, an integrated development environment designed for the 
+<u>R programming language</u>. It is commonly used for statistics and data analysis because it 
+allows users to write code, test commands and visualize results in the same workspace. 
+In our research, RStudio helped us process and analyse <u>air quality data</u> in order to 
+generate different graphics that show how pollution changes over time.
+</p>
+
+<p>
+Before starting the analysis, we prepared the working environment by installing several 
+libraries with the command <b>install.packages()</b>. The most important ones were 
+<b>tidyverse</b>, which helps organise and transform data, <b>dplyr</b> for manipulating 
+data tables, <b>lares</b> for cleaning and replacing text values, and <b>openair</b>, 
+a package designed for the <u>analysis of atmospheric pollution and wind data</u>. 
+These libraries were loaded using the <b>library()</b> command so their functions could 
+be used later in the code.
+</p>
+
+<p>
+After preparing the environment, we imported the dataset using <b>read.csv()</b>. 
+The original data was stored in a <u>wide format</u>, where each hour of the day appeared 
+in a different column. To make the data easier to analyse, we converted it into a 
+<u>long format</u> using the command <b>pivot_longer()</b>. We also removed unnecessary 
+columns so the dataset became simpler and easier to work with.
+</p>
+
+<p>
+Another important step was formatting the <u>date and time information</u>. The date and 
+hour columns were combined using <b>mutate()</b> and <b>paste0()</b>. Then the time format 
+was cleaned using <b>replaceall()</b>. After this, the column was converted into a proper 
+date-time format using <b>as.POSIXct()</b>. Finally, the pollutant variable was converted 
+into a <u>factor</u> with <b>as.factor()</b> so that pollutants could be grouped in graphs.
+</p>
+
+<p>
+Once the data was prepared, we created visualizations using the <u>openair</u> package. 
+The function <b>timeVariation()</b> shows how pollution changes depending on the hour, 
+day or month. Another function, <b>trendLevel()</b>, was used to analyse the evolution of 
+a specific pollutant such as H2S. These graphics helped us understand pollution patterns 
+and present the results of our research more clearly.
+</p>
+
+</div>
