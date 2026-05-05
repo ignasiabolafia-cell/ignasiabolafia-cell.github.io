@@ -45,3 +45,147 @@ and present the results of our research more clearly.
 </p>
 
 </div>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" rel="stylesheet">
+  <style>
+    /* 1. Submenús en mode fosc */
+    body[data-bs-theme="dark"] .dropdown-menu {
+      background-color: #2c2c2c !important;
+      border-color: #444;
+    }
+    body[data-bs-theme="dark"] .dropdown-item {
+      color: #f8f9fa !important;
+    }
+    body[data-bs-theme="dark"] .dropdown-item:hover,
+    body[data-bs-theme="dark"] .dropdown-item:focus {
+      background-color: #3c3c3c !important;
+      color: #ffffff !important;
+    }
+
+    /* 2. Botó mode fosc/clar només icona */
+    #themeToggle {
+      border: none;
+      background: transparent;
+      font-size: 1.3rem;
+      color: inherit;
+    }
+
+    /* 3. Hamburguesa blanca en mode fosc */
+    .navbar-toggler {
+      border: none;
+    }
+    .navbar-toggler-icon {
+      background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%280,0,0,0.7%29' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+    }
+    body[data-bs-theme="dark"] .navbar-toggler-icon {
+      background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28255,255,255,0.9%29' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+    }
+
+    /* 4. Logo circular i adaptatiu */
+    .logo {
+      width: 40px;
+      height: 40px;
+      object-fit: cover;
+    }
+    @media (max-width: 576px) {
+      .logo {
+        width: 30px;
+        height: 30px;
+      }
+    }
+    @media (min-width: 992px) {
+      .logo {
+        width: 50px;
+        height: 50px;
+      }
+    }
+  </style>
+</head>
+<body data-bs-theme="light">
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-light shadow sticky-top">
+    <div class="container-fluid">
+      <!-- 5. Logo i text -->
+      <a class="navbar-brand d-flex align-items-center" href="#">
+        <img src="logo.png" alt="Logo" class="logo rounded-circle me-2">
+        <span class="fw-bold">Web d'Ignasi</span>
+      </a>
+
+      <!-- Botó menú mòbil -->
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <!-- Menú -->
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <!-- Projecte 1 -->
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="proj1Dropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              <i class="fa-solid fa-ship me-1"></i> Nàutica
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="proj1Dropdown">
+              <li><a class="dropdown-item" href="https://ignasiabolafia-cell.github.io/vectors"><i class="fa-solid fa-ship me-1"></i> vectors nàutics</a></li>
+              <li><a class="dropdown-item" href="https://ignasiabolafia-cell.github.io/gps"><i class="fa-solid fa-ship me-1"></i> mapes nàutics</a></li>
+               <li><a class="dropdown-item" href="https://ignasiabolafia-cell.github.io/gpsmillorat"><i class="fa -solid fa-ship me-1"></i> mapes nàutics</a></li>
+               <li><a class="dropdown-item" href="https://ignasiabolafia-cell.github.io/distancia"><i class="fa-solid fa-ship me-1"></i> distància</a></li>
+         
+            </ul>
+          </li>
+          <!-- Projecte 2 -->
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="proj2Dropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              <i class="fa-solid fa-robot me-1"></i> Braç robòtic
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="proj2Dropdown">
+              <li><a class="dropdown-item" href="https://ignasiabolafia-cell.github.io/cdirecta"><i class="fa-solid fa-robot me-1"></i> cinemàtica directa</a></li>
+              <li><a class="dropdown-item" href="https://ignasiabolafia-cell.github.io/cinversa"><i class="fa-solid fa-robot me-1"></i>cinemàtica inversa</a></li>
+              <li><a class="dropdown-item" href="https://ignasiabolafia-cell.github.io/caculadora"><i class="fa-solid fa-robot me-1"></i>Cinemàtica robòtica</a></li>
+              <li><a class="dropdown-item" href="https://ignasiabolafia-cell.github.io/caculadora"><i class="fa-solid fa-robot me-1"></i>Dinàmica robòtica</a></li>
+            </ul>
+          </li>
+           <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="proj2Dropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              <i class="fa-solid fa-microchip me-1"></i> ARDUINO
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="proj2Dropdown">
+              <li><a class="dropdown-item" href="https://ignasiabolafia-cell.github.io/circuit1"><i class="fa-solid fa-microchip me-1"></i> Parpelleig LED</a></li>
+              <li><a class="dropdown-item" href="https://ignasiabolafia-cell.github.io/circuit2"><i class="fa-solid fa-microchip me-1"></i>Intensitat LED</a></li>
+               <li><a class="dropdown-item" href="https://ignasiabolafia-cell.github.io/circuit3"><i class="fa-solid fa-microchip me-1"></i> Intensitat LED RGB</a></li>
+              <li><a class="dropdown-item" href="https://ignasiabolafia-cell.github.io/circuit4"><i class="fa-solid fa-microchip me-1"></i>Espectrofotòmetre</a></li>
+             
+              </ul>
+          </li>
+           </li>
+          <!-- Projecte 3 -->
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle"#href="https://mluaces-collab.github.io/Arduino" id="proj2Dropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              <i class="fa-solid fa-microchip me-1"></i> Robot poeta
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="proj2Dropdown">
+              <li><a class="dropdown-item" href="https://ignasiabolafia-cell.github.io/poeta1"><i class="fa-solid fa-microchip me-1"></i> Poeta 1 </a></li>
+              <li><a class="dropdown-item" href="https://ignasiabolafia-cell.github.io/poeta2"><i class="fa-solid fa-microchip me-1"></i> Poeta 2 </a></li>
+              <li><a class="dropdown-item" href="https://ignasiabolafia-cell.github.io/poeta3"><i class="fa-solid fa-microchip me-1"></i> Poeta 3 </a></li>
+              <li><a class="dropdown-item" href="https://ignasiabolafia-cell.github.io/poeta4"><i class="fa-solid fa-microchip me-1"></i> Poeta 4 </a></li>
+              <li><a class="dropdown-item" href="https://ignasiabolafia-cell.github.io/poeta5"><i class="fa-solid fa-microchip me-1"></i> Poeta 5 </a></li>
+              <li><a class="dropdown-item" href="https://ignasiabolafia-cell.github.io/poeta6"><i class="fa-solid fa-microchip me-1"></i> Poeta 6 </a></li>
+            </ul>
+          </li>
+           <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="proj2Dropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              <i class="fa-solid fa-head-side-mask me-1"></i> AIR POLLUTION AND RESPIRATORY INFECTIONS
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="proj2Dropdown">
+              <li><a class="dropdown-item" href="https://ignasiabolafia-cell.github.io/barcelona/introduction"><i class="fa-solid fa-head-side-mask me-1"></i> Introduction</a></li>
+              <li><a class="dropdown-item" href="https://ignasiabolafia-cell.github.io/barcelona/materialsandmethods"><i class="fa-solid fa-head-side-mask me-1"></i>Materials and methods</a></li>
+               <li><a class="dropdown-item" href="https://ignasiabolafia-cell.github.io/barcelona/results"><i class="fa-solid fa-head-side-mask me-1"></i> Results</a></li>
+              <li><a class="dropdown-item" href="https://ignasiabolafia-cell.github.io/barcelona/conlusions"><i class="fa-solid fa-head-side-mask me-1"></i>Conclusions</a></li>
+             
+              </ul>
+          </li>
+        </ul>
+        <!-- Botó mode clar/fosc -->
+        <button id="themeToggle" class="ms-2"><i class="fa-solid fa-moon"></i></button>
+      </div>
+    </div>
+  </nav>
