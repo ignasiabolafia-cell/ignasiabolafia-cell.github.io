@@ -124,7 +124,7 @@ function calculateangles() {
 
   let q2_deg = parseFloat(document.getElementById('q2').value); // metres
   
-  let q1 = q1_deg * Math.PI / 180; // Convertir graus a radians
+  let d = Math.sqrt(x*x+y*y);//calculem amb pitàgores la distància de la hipotenusa del braç robòtic en posició (x,y)//
 
   let q2 = q2_deg * Math.PI / 180; // Convertir graus a radians
 
