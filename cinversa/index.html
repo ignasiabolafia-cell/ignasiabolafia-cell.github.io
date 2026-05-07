@@ -90,7 +90,7 @@ Charset vol dir character set, és el "set" que vol dir conjunt de "characters" 
 
     <label for="X">Posició final X (en metres):</label>
 
-    <input type="number" id="X" value="2.2" step="0.1"><br><br>
+    <input type="number" id="X" value="1.2" step="0.1"><br><br>
 
 
     <label for="y">Posició final y (en metres):</label>
@@ -124,9 +124,22 @@ function calculateangles() {
 
   let q2_deg = parseFloat(document.getElementById('q2').value); // metres
   
+  
   let d = Math.sqrt(x*x+y*y);//calculem amb pitàgores la distància de la hipotenusa del braç robòtic en posició (x,y)//
 
   let q2 = q2_deg * Math.PI / 180; // Convertir graus a radians
+  let q2 = Math.acos((d*d-a1*a1-a2*a2)/(2*a1*a2));//Càlcul de l'angle 2//
+
+  let k1 = a1+a2+Math.cos(q2)
+  let k2 = a2*Math.sin(q2)
+
+  let q1 = Math.atan2(x,y)-Math.atan2(k1,k2)
+  //Es el càlcul de l'angle 1
+  //q1 i q2 en el sitema internacional sor radiants//
+  let q1_deg = q1*180/Math.PI;
+  let q2_deg = q2*180/Math.PI;
+
+  
 
 
   // **Mostrar els contenidors de sortida**
@@ -140,9 +153,9 @@ function calculateangles() {
 
   let output = "<div class='equation'>Les equacions per calcular la posició final del robot són:</div>";
 
-  output += "<div class='equation'>\\[ x = a_1 \\cos(q_1) + a_2 \\cos(q_1 + q_2) \\]</div>";
+  output += "<div class='equation'>\\[ q_2 = a_1 \\cos(q_2) + a_2 \\cos(q_1 + q_2) \\]</div>";
 
-  output += "<div class='equation'>\\[ y = a_1 \\sin(q_1) + a_2 \\sin(q_1 + q_2) \\]</div>";
+  output += "<div class='equation'>\\[ q_1 = a_1 \\sin(q_1) + a_2 \\sin(q_1 + q_2) \\]</div>";
 
 
   // Fase 2: Substituir les variables
