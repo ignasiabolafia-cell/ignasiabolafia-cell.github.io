@@ -3,53 +3,49 @@
  <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Web d'Òscar</title>
+  <title>Web d'Ignasi</title>
   
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" rel="stylesheet">
-   <link rel="stylesheet" href="/styles.css"/>
-</head>
-<body data-bs-theme="light">
-  <!-- Navbar -->
-  <div id="nav-placeholder">
+<h2>Conclusions</h2>
 
-</div>
+<p>
+This project shows that air pollution is still a big problem in Barcelona.
+</p>
 
-<script>
-document.addEventListener("DOMContentLoaded", async () => {
-  const response = await fetch("/nav.html");
-  const html = await response.text();
-  document.getElementById("nav-placeholder").innerHTML = html;
-});
-</script>
-  <main class="container py-5">
-    <h1 class="display-5 fw-bold mb-4"> Conclusions</h1>
-   <p>When analyzing the project as a whole, it is clear that what began as a massive and complex R and Python database has ended up providing a very accurate snapshot of air quality in Barcelona. The process of cleaning the data from Meteocat and the XPVCA network, together with the use of SIVIC codes and APIs from the Catalan government, has made it possible to transform abstract figures into pollution patterns that are now fully visible.
-   </p>
-   <p>It is striking to see how daily human activity, especially commuting to school or work, is so dramatically reflected in the $NO_2$ graphs. The visualizations literally map the city's emissions according to traffic schedules, showing that pollution peaks are not random but follow the rhythm of residents' lives.
-   </p>
-  <p>Looking at the final results, it is clear that although the levels of certain gases have fluctuated over the years, peak levels during rush hour remain a critical constant, especially in high-density areas such as the Sants district. The use of visualization tools such as the openair library has been essential in converting technical data tables into heat maps and graphs that are understandable to any citizen.</p>
-   <p>In conclusion, this study demonstrates that technology and programming are essential tools for diagnosing real urban problems. The analysis reveals that the quality of the air we breathe is not a random factor, but rather the direct result of the mobility patterns and lifestyle habits that are maintained in the city day after day.</p>
+<p>
+Areas with more traffic and more people usually have higher levels of pollution,
+especially NO₂ and PM10.
+</p>
 
+<p>
+The results also show that pollution can affect people’s health,
+causing breathing and heart problems.
+</p>
 
-  </main>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
-  <script>
-    // Mode clar/fosc amb canvi d'icona
-    const themeToggle = document.getElementById('themeToggle');
-    const themeIcon = themeToggle.querySelector('i');
+<p>
+For this reason, improving air quality is very important
+for the city and its citizens.
+</p>
 
-    themeToggle.addEventListener('click', () => {
-      if (document.body.getAttribute('data-bs-theme') === 'dark') {
-        document.body.setAttribute('data-bs-theme', 'light');
-        themeIcon.classList.remove('fa-sun');
-        themeIcon.classList.add('fa-moon');
-      } else {
-        document.body.setAttribute('data-bs-theme', 'dark');
-        themeIcon.classList.remove('fa-moon');
-        themeIcon.classList.add('fa-sun');
-      }
-    });
-  </script>
+<p>
+Some actions that could help reduce pollution are:
+</p>
+
+<ul>
+  <li>Using public transport</li>
+  <li>Riding bicycles</li>
+  <li>Walking more</li>
+  <li>Creating more green spaces</li>
+</ul>
+
+<p>
+Although Barcelona has already taken some measures,
+more actions are still needed.
+</p>
+
+<p>
+In conclusion, studying air pollution helps us understand its impact
+on the environment and on people’s lives,
+and it is important for creating a healthier and more sustainable city.
+</p>
    </body>
 </html>
